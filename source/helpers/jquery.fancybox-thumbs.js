@@ -30,6 +30,10 @@
 				if (item.element) {
 					href = $(item.element).find('img').attr('src');
 				}
+				
+				if (!href) {
+					href = $(item.element).find('img').attr('data-src');
+				}
 
 				if (!href && item.type === 'image' && item.href) {
 					href = item.href;
